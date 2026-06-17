@@ -4,8 +4,8 @@
 Ce projet vise à développer un modèle de Deep Learning capable de détecter automatiquement la tuberculose à partir d’images de radiographies pulmonaires.
 
 ## Jeu de données
-Images de tuberculose : 700
-Images normales : 3500
+_Images de tuberculose : 700
+_Images normales : 3500
 ## Phase 1 complétée
 Nettoyage des données
 Analyse exploratoire des données (EDA)
