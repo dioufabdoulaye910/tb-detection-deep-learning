@@ -20,7 +20,7 @@ Images normales : 3500
 - Normalisation des pixels entre 0 et 1  
 - Création des variables X et y  
 - Division en train/test (80/20)  
-- Gestion du déséquilibre avec class weights  
+- Gestion du déséquilibre avec class weights 
 
 ## Prochaine étape
 - Entraînement d’un modèle CNN  
