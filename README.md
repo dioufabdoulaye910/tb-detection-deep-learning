@@ -4,14 +4,10 @@
 
 Ce projet vise à développer un modèle de Deep Learning capable de détecter automatiquement la tuberculose à partir d’images de radiographies pulmonaires.
 
----
-
 ## Jeu de données
 
 - Images de tuberculose : 700  
 - Images normales : 3500  
-
----
 
 ## Phase 1 complétée
 
@@ -21,8 +17,6 @@ Ce projet vise à développer un modèle de Deep Learning capable de détecter a
 - Analyse de la structure du dataset  
 - Identification du déséquilibre des classes  
 
----
-
 ## Phase 2 complétée
 
 - Chargement des images depuis Google Drive  
@@ -31,8 +25,6 @@ Ce projet vise à développer un modèle de Deep Learning capable de détecter a
 - Création des variables X et y  
 - Division en train/test (80/20)  
 - Gestion du déséquilibre avec class weights  
-
----
 
 ## Phase 3 complétée – Modélisation
 
@@ -46,8 +38,6 @@ Deux approches ont été développées :
 - Accuracy : **94%**
 - Meilleure généralisation et performance
 
----
-
 ## Évaluation du modèle
 
 Le modèle final a été évalué à l’aide de :
@@ -58,16 +48,12 @@ Le modèle final a été évalué à l’aide de :
 
 Les résultats montrent une très bonne capacité de détection de la tuberculose avec un recall élevé, ce qui est essentiel dans un contexte médical.
 
----
-
 ## Prochaine étape
 
 - Optimisation et fine-tuning du modèle  
 - Amélioration des performances  
 - Déploiement (API ou interface web)  
 - Amélioration possible avec ResNet50  
-
----
 
 ## Outils utilisés
 
