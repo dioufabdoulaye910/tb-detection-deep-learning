@@ -1,65 +1,240 @@
-# tb-detection-deep-learning
+# TB Detection Deep Learning
 
 ## Description du projet
 
-Ce projet vise à développer un modèle de Deep Learning capable de détecter automatiquement la tuberculose à partir d’images de radiographies pulmonaires.
+Ce projet a pour objectif de développer une solution d'Intelligence Artificielle capable de détecter automatiquement la tuberculose à partir de radiographies pulmonaires.
 
-## Jeu de données
+Le projet est réalisé en plusieurs phases :
 
-- Images de tuberculose : 700  
-- Images normales : 3500  
+- **Phase 1 :** Analyse exploratoire des données (EDA)
+- **Phase 2 :** Prétraitement des données
+- **Phase 3 :** Entraînement et évaluation de modèles de Deep Learning
+- **Phase 4 :** Développement d'une application web interactive permettant l'utilisation du modèle par un utilisateur final.
 
-## Phase 1 complétée
 
-- Nettoyage des données  
-- Analyse exploratoire des données (EDA)  
-- Visualisation des radiographies pulmonaires  
-- Analyse de la structure du dataset  
-- Identification du déséquilibre des classes  
 
-## Phase 2 complétée
+# Jeu de données
 
-- Chargement des images depuis Google Drive  
-- Redimensionnement des images à 224×224 pixels  
-- Normalisation des pixels entre 0 et 1  
-- Création des variables X et y  
-- Division en train/test (80/20)  
-- Gestion du déséquilibre avec class weights  
+Le jeu de données est composé de :
 
-## Phase 3 complétée – Modélisation
+- **700 radiographies présentant une tuberculose**
+- **3500 radiographies normales**
 
-Deux approches ont été développées :
+Le déséquilibre des classes est pris en compte lors de l'entraînement du modèle grâce à l'utilisation des **Class Weights**.
 
-### CNN classique
-- Architecture convolutionnelle simple  
-- Accuracy : **87%**
 
-### Transfer Learning (MobileNetV2)
-- Accuracy : **94%**
-- Meilleure généralisation et performance
 
-## Évaluation du modèle
+# Phase 1 – Analyse exploratoire des données (EDA)
 
-Le modèle final a été évalué à l’aide de :
+Travaux réalisés :
 
-- Matrice de confusion  
-- Courbe ROC (AUC)  
-- Classification report (precision, recall, F1-score)
+- Nettoyage du dataset
+- Analyse exploratoire (EDA)
+- Visualisation des radiographies pulmonaires
+- Analyse de la distribution des classes
+- Vérification de la qualité des images
+- Identification du déséquilibre entre les classes
 
-Les résultats montrent une très bonne capacité de détection de la tuberculose avec un recall élevé, ce qui est essentiel dans un contexte médical.
 
-## Prochaine étape
 
-- Optimisation et fine-tuning du modèle  
-- Amélioration des performances  
-- Déploiement (API ou interface web)  
-- Amélioration possible avec ResNet50  
+# Phase 2 – Prétraitement des données
 
-## Outils utilisés
+Les opérations suivantes ont été réalisées :
 
-- Python  
-- Google Colab  
-- TensorFlow / Keras  
-- OpenCV  
-- Scikit-learn  
-- Matplotlib / Seaborn  
+- Chargement des images depuis Google Drive
+- Redimensionnement des images en **224 × 224 pixels**
+- Conversion des images sous forme de tableaux NumPy
+- Normalisation des pixels entre **0 et 1**
+- Création des variables **X** et **y**
+- Séparation du dataset (80 % entraînement / 20 % test)
+- Gestion du déséquilibre des classes avec **Class Weights**
+
+
+
+# Phase 3 – Modélisation
+
+Deux architectures ont été développées et comparées.
+
+## CNN classique
+
+- Architecture convolutionnelle personnalisée
+- Accuracy : **87 %**
+
+## Transfer Learning – MobileNetV2
+
+Le modèle final repose sur MobileNetV2 pré-entraîné.
+
+Résultats obtenus :
+
+- Accuracy : **94 %**
+- Meilleure généralisation
+- Meilleure robustesse
+- Temps d'entraînement réduit
+
+
+
+# Évaluation du modèle
+
+Le modèle a été évalué à l'aide de plusieurs métriques :
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Matrice de confusion
+- Courbe ROC (AUC)
+
+Les performances obtenues montrent une excellente capacité du modèle à détecter les cas de tuberculose tout en limitant les faux négatifs, critère particulièrement important dans le domaine médical.
+
+
+
+# Phase 4 – Développement de l'application
+
+Une application web complète a été développée avec **Streamlit** afin de permettre l'utilisation du modèle de Deep Learning par un utilisateur final.
+
+## Fonctionnalités développées
+
+### Analyse de radiographies
+
+- Import d'une radiographie pulmonaire
+- Prétraitement automatique
+- Prédiction de la présence d'une tuberculose
+- Affichage du score de confiance
+
+
+
+### Visualisation du résultat
+
+- Jauge de risque interactive
+- Niveau de risque :
+  - Faible
+  - Modéré
+  - Élevé
+- Seuil de décision configurable
+
+
+
+### Explication des décisions de l'IA
+
+L'application intègre **Grad-CAM**, permettant de visualiser les zones de la radiographie ayant le plus influencé la décision du modèle.
+
+Cette fonctionnalité améliore considérablement l'interprétabilité du modèle.
+
+
+
+### Rapport PDF
+
+Génération automatique d'un rapport contenant :
+
+- Informations du patient
+- Résultat de l'analyse
+- Score obtenu
+- Niveau de risque
+- Recommandation
+- Radiographie originale
+- Carte Grad-CAM
+
+
+
+### Gestion des analyses
+
+Les analyses sont automatiquement enregistrées dans une base de données SQLite.
+
+L'application permet :
+
+- Consultation de l'historique
+- Recherche par patient
+- Statistiques globales
+- Export CSV
+
+
+
+# Technologies utilisées
+
+## Intelligence Artificielle
+
+- TensorFlow
+- Keras
+- MobileNetV2
+- NumPy
+- Scikit-learn
+
+## Développement
+
+- Python
+- Streamlit
+- SQLite
+- OpenCV
+- Pillow
+- Plotly
+- ReportLab
+- Pandas
+
+## Visualisation
+
+- Matplotlib
+- Seaborn
+- Grad-CAM
+
+
+
+# Lancement du projet
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Exécution
+
+```bash
+streamlit run app.py
+```
+
+L'application sera accessible depuis :
+
+```
+http://localhost:8501
+```
+
+---
+
+# Captures d'écran
+
+assets/screenshots/accueil.png
+assets/screenshots/analyse.png
+assets/screenshots/resultat.png
+assets/screenshots/gradcam.png
+assets/screenshots/dossierpatient.png
+assets/screenshots/statistiques.png
+assets/screenshots/pdf.png
+
+
+
+# Perspectives d'amélioration
+
+Les évolutions possibles du projet sont :
+
+- Authentification des utilisateurs
+- Gestion complète des dossiers patients
+- Déploiement sur le Cloud
+- Comparaison avec ResNet50, EfficientNet et DenseNet
+- Optimisation des performances du modèle
+- Validation sur un jeu de données plus important
+
+
+
+# Auteur
+
+**Abdoulaye DIOUF**
+
+Projet réalisé dans le cadre du module **Deep Learning**.
+
+
+
+# Avertissement
+
+Cette application est destinée à un usage pédagogique et de démonstration.
+
+Elle ne remplace en aucun cas l'avis d'un professionnel de santé ou un diagnostic médical officiel.
