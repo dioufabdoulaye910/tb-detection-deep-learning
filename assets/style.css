@@ -1,0 +1,103 @@
+/* =========================
+   GLOBAL STYLE
+========================= */
+
+body {
+    background-color: #f7f9fc;
+    font-family: "Arial", sans-serif;
+}
+
+/* =========================
+   TITRE PRINCIPAL
+========================= */
+
+h1 {
+    color: #1f3b57;
+    text-align: center;
+    font-weight: 700;
+}
+
+h3 {
+    color: #2c587a;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+[data-testid="stSidebar"] {
+    background-color: #0f2a43;
+    color: white;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: white;
+}
+
+/* =========================
+   BUTTON STYLE
+========================= */
+
+.stButton>button {
+    background-color: #1f77b4;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+}
+
+.stButton>button:hover {
+    background-color: #125a8a;
+}
+
+/* =========================
+   UPLOAD BOX
+========================= */
+
+[data-testid="stFileUploader"] {
+    border: 2px dashed #1f77b4;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+}
+
+/* =========================
+   METRICS
+========================= */
+
+[data-testid="stMetricValue"] {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1f77b4;
+}
+
+/* =========================
+   SUCCESS / ERROR BOX
+========================= */
+
+.stSuccess {
+    background-color: #e6f4ea;
+}
+
+.stError {
+    background-color: #fdecea;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    visibility: hidden;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.stProgress > div > div {
+    background-color: #1f77b4;
+}
