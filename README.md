@@ -198,17 +198,48 @@ L'application sera accessible depuis :
 http://localhost:8501
 ```
 
----
-
 # Captures d'écran
 
-assets/screenshots/accueil.png
-assets/screenshots/analyse.png
-assets/screenshots/resultat.png
-assets/screenshots/gradcam.png
-assets/screenshots/dossierpatient.png
-assets/screenshots/statistiques.png
-assets/screenshots/pdf.png
+## Page d'accueil
+
+![Accueil](assets/screenshots/accueil.png)
+
+
+
+## Analyse d'une radiographie
+
+![Analyse](assets/screenshots/analyse.png)
+
+
+
+## Résultat de l'analyse
+
+![Résultat](assets/screenshots/resultat.png)
+
+
+
+## Visualisation Grad-CAM
+
+![Grad-CAM](assets/screenshots/gradcam.png)
+
+
+
+## Dossier patient
+
+![Dossier patient](assets/screenshots/dossierpatient.png)
+
+
+
+## Statistiques
+
+![Statistiques](assets/screenshots/statistiques.png)
+
+
+
+## Rapport PDF
+
+![Rapport PDF](assets/screenshots/pdf.png)
+
 
 
 
